@@ -22,9 +22,12 @@ public class MainActivity extends Activity {
 
         TextView display = (TextView)enter;
 
-        ((TextView)findViewById(R.id.helloText)).setText(display.getText());
-
-
+        if((display.getText().length()>=8) && !(display.getText()=="password")) {
+            ((TextView) findViewById(R.id.helloText)).setText("acceptable");
+        }
+        else{
+            ((TextView) findViewById(R.id.helloText)).setText("unacceptable");
+        }
 
     }
 
