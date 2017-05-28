@@ -27,7 +27,7 @@ public class SimpleEspressoTest {
     @Before
     public void initString()
     {
-        textToFind = "Hello World!";
+        textToFind = "password";
     }
 
     @Test
@@ -40,6 +40,10 @@ public class SimpleEspressoTest {
         //Same thing but not using IDs
         //It does not makes much sense in this case
         onView(withText(textToFind)).check(matches(withText(textToFind)));
+
+        //onView(withId(R.id.editText)).perform(withText(textToFind));
+        onView(withId(R.id.helloText)).check(findText().length()>=8);
+        onView(withId(R.id.helloText)).check(matches(withText(textToFind)));
     }
 
 

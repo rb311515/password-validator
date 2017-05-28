@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+
+
 public class MainActivity extends Activity {
 
     String text="Hello World!";
