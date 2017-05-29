@@ -8,6 +8,7 @@ import org.junit.runner.RunWith;
 import android.support.test.filters.LargeTest;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
+import android.widget.EditText;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
@@ -35,15 +36,20 @@ public class SimpleEspressoTest {
     {
         //Tries to find the text on the screen
         //Return true if it matches the expected test
-        onView(withId(R.id.helloText)).check(matches(withText(textToFind)));
+        //onView(withId(R.id.helloText)).check(typeText(textToFind));
+        //EditText enter = (EditText)findViewById(R.id.editText);
 
         //Same thing but not using IDs
         //It does not makes much sense in this case
-        onView(withText(textToFind)).check(matches(withText(textToFind)));
-
+        //(onView(withText(textToFind)).toString().toLowerCase()).check(matches(withText(textToFind).toString()));
+        //assisted by Josh Morris fellow student
         //onView(withId(R.id.editText)).perform(withText(textToFind));
-        onView(withId(R.id.helloText)).check(findText().length()>=8);
-        onView(withId(R.id.helloText)).check(matches(withText(textToFind)));
+        //replacetext("")
+        //enterText
+        //Clickbutton
+        //matchDisplay
+        //onView(withId(R.id.helloText)).check(enter.toString().length()>=8);
+        //onView(withId(R.id.helloText)).check(matches(withText(textToFind)));
     }
 
 

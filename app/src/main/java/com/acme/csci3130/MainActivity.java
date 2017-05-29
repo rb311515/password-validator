@@ -35,7 +35,18 @@ public class MainActivity extends Activity {
 
     protected boolean validate(String password){
         if(password.length()>=8){
-            return true;
+        if(password.toLowerCase().equals("password")){
+            return false;
+        }
+        if(password.matches(".*[!,@#$%^&*()?].*")){
+            if(password.matches(".*[0-9].*")){
+                if(password.matches(".*[A-Z].*")) {
+                    if (password.matches(".*[a-z].*")) {
+                        return true;
+                    }
+                }
+            }
+        }
         }
         return false;
     }
