@@ -24,13 +24,20 @@ public class MainActivity extends Activity {
 
         TextView display = (TextView)enter;
 
-        if((display.getText().length()>=8) && !(display.getText()=="password")) {
+        if(validate(display.getText().toString())) {
             ((TextView) findViewById(R.id.helloText)).setText("acceptable");
         }
         else{
             ((TextView) findViewById(R.id.helloText)).setText("unacceptable");
         }
 
+    }
+
+    protected boolean validate(String password){
+        if(password.length()>=8){
+            return true;
+        }
+        return false;
     }
 
 }

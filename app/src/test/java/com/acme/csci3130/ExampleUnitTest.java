@@ -15,8 +15,9 @@ public class ExampleUnitTest {
     @Test
     public void passwordSecure() throws Exception {
 
-
-        //assertNotEquals("password", password.toString());
-        //assertTrue(8<=password.toString().length());
+        assertFalse("password".length()<8);
+        assertFalse(("Sassword".toLowerCase()).equals("password"));
+        assertFalse("password".contains(".*[!,@,#,$,%,^,&,*,(,),?].*"));
     }
+
 }
