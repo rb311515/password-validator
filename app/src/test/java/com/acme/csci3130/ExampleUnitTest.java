@@ -17,7 +17,7 @@ public class ExampleUnitTest {
 
         assertFalse("password".length()<8);
         assertFalse(("Sassword".toLowerCase()).equals("password"));
-        assertFalse("password".contains(".*[!,@,#,$,%,^,&,*,(,),?].*"));
+        assertFalse("password".matches(".*[!@#$%^&*()?].*"));
     }
 
 }
